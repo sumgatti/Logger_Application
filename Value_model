@@ -1,0 +1,73 @@
+
+
+About Value Model SME/Residential:
+The customer value is the keystone for effective product marketing activities. It brings together customer intelligence, competitive insight, and product valuation. It delivers a concise, supportable statement of the customers value. It quantifies how that value is realized based on all of the target customers likely interactions and experiences and billed consumption. The customer value provides a focused approach to understanding the target customer in the context of our tarriffs.
+The major activities that bear on the revenue and profitability potential of customers: (1) the effort to acquire new customers, 
+(2) the challenge of retaining them, and (3) the various means of increasing their value.
+
+The model is built in Data Lake using Hive (SQL-like tool that allows us to run in a distrubuted fashion on Hadoop cluster).
+Data Model runs once in a month and it's used to create monthly reports/dashboards.
+
+We have a repository from different data sources streamed into lake on daily basis and for this vaue model some of the below 
+customer data points are used. 
+
+Customer Base data 
+Customer consumption and billing rates over the previous 12 months before model is run
+All payments data 	 
+ACD call data-Agent costs
+IVR call data-Costs of system
+Dunning	cost of printing / postage
+Existing outstanding debits / credits	 
+switching data	Number of new connections/ acquisitions by FOTS/ telesales/Web
+Retention sales	number of retention sales in the past year by FOTS/ telesales/Web
+Emails contacts	Admin costs
+Meter readings	Admin costs - only where admin team inputs reads
+Instalment plans setup	Admin costs
+PAYG installed	broken down by liberty / lifestyle
+SPAYG installs	install costs
+Ebiller Data- Reduces costs of printing / postage of bill
+
+Apart from the above , we also have fixed or static financial data provided by finance team.
+
+
+The value is calculated per customer at contract account level, whose consumption is annualized and whose costs are based on a 
+12 month summary of all transactions.
+VALUE = CONTRIBUTION - (Fixed Costs + Marginal Costs + Debt)
+
+The monetary value amount categorized into 10 deciles, so the customer can fall into any of the 10 value deciles (H1, H2, H3, M1, M2, M3, M4, L1, L2, L3)
+H1 – top 10% of value
+L3 – lowest 10% of value
+
+
+Final value models created will be : 
+•	customer_value_month :  the aggregated value per month that each customer has incurred in any of the activities
+•	customer_value_year  :  the aggregated value per year that each customer has incurred in any of the activities
+•	customer_value_ledger : is a ledger of all the bills, balances, payments, costs that customers have incurred
+
+cost to serve === 
+cost to aquire === bill, payment cost
+
+run_id === 
+value band === 
+
+residential === 
+
+
+finance team
+
+duos group === DG1 and DG2
+
+dg5,dg6,dg7
+
+rate category code 
+
+
+ed & gd == residential
+en & gn , eu, gu == commercial
+sme == dg
+
+53,000 
+
+
+
+  
